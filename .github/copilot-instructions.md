@@ -37,6 +37,7 @@ ixpert-for-ipad/
 │       ├── HowtoViewController.xib      # How-to view NIB
 │       ├── iXpert for iPad-Info.plist   # App bundle info
 │       └── iXpert for iPad-Prefix.pch  # Precompiled header
+├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
