@@ -16,6 +16,10 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+### Added
+
+- created `CLAUDE.md` to give Claude Code sessions guidance on the MRC build, the single-view architecture, and the mode-dispatch conventions
+
 ## [0.1.1] - 2026-05-08
 
 ### Changed
