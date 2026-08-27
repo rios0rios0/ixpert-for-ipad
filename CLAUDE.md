@@ -12,7 +12,7 @@ iPad-only computational/text converter. Objective-C, **manual reference counting
 
 ## Build
 
-No CI, no automated tests (no XCTest target). Build is manual:
+No build automation and no automated tests (no XCTest target); the only CI is the Claude review and `@claude` mention workflows. Build is manual:
 
 1. Open `Project/iXpert for iPad.xcodeproj` in Xcode.
 2. Select an iPad Simulator target, run with `Cmd+R`.
