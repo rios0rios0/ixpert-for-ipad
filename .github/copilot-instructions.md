@@ -105,7 +105,7 @@ There is no automated test suite for this project (no XCTest targets). Testing w
 
 ## CI/CD
 
-This repository has no CI/CD pipeline. There are no GitHub Actions workflows.
+This repository has no build or deployment pipeline. The only workflows are `.github/workflows/claude-review.yaml` and `.github/workflows/claude-mention.yaml`, which call the shared Claude reusable workflows in `rios0rios0/pipelines` and need the `CLAUDE_CODE_OAUTH_TOKEN` secret.
 
 ## Coding Conventions
 
