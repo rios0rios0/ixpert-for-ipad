@@ -9,5 +9,5 @@ permissions:
   contents: 'read'
 
 jobs:
-  checks:
+  default:
     uses: 'rios0rios0/pipelines/.github/workflows/checks.yaml@main'
