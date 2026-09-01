@@ -13,7 +13,12 @@ Unlike the iPhone version which used separate Option and Detail views with flip 
 ```
 ixpert-for-ipad/
 ├── .github/
-│   └── copilot-instructions.md       # This file
+│   ├── copilot-instructions.md       # This file
+│   ├── skills/
+│   │   └── code-review/SKILL.md      # Tailored Copilot code-review skill
+│   └── workflows/
+│       ├── claude-review.yaml        # Automated Claude PR review
+│       └── claude-mention.yaml       # @claude mention responder
 ├── Build/
 │   ├── iXpert for iPad.app/          # Pre-built application bundle
 │   └── iXpert for iPad.ipa           # Packaged iOS application archive

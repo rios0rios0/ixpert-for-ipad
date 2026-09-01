@@ -1,0 +1,3 @@
+kind: 'Changed'
+body: 'refreshed `.github/copilot-instructions.md` so the repository-structure tree lists the `.github/skills/code-review/SKILL.md` skill and the `.github/workflows/` Claude callers added since the diagram was last written'
+time: '2026-09-01T16:54:37.769910188Z'
