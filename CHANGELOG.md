@@ -22,6 +22,12 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-09-01
+
+### Changed
+
+- refreshed `.github/copilot-instructions.md` so the repository-structure tree lists the `.github/skills/code-review/SKILL.md` skill and the `.github/workflows/` Claude callers added since the diagram was last written
+
 ## [0.4.0] - 2026-08-28
 
 ### Added
