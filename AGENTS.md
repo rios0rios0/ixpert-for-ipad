@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI coding agents (Claude Code, Codex, Cursor, GitHub Copilot) when working with code in this repository.
 
 ## Status
 
@@ -12,7 +12,7 @@ iPad-only computational/text converter. Objective-C, **manual reference counting
 
 ## Build
 
-No build automation and no automated tests (no XCTest target); the only CI is the Claude review and `@claude` mention workflows. Build is manual:
+No build automation and no automated tests (no XCTest target). CI is `.github/workflows/checks.yaml` (the shared checks from `rios0rios0/pipelines`, on pull requests to `main`) plus the Claude review and `@claude` mention workflows. Build is manual:
 
 1. Open `Project/iXpert for iPad.xcodeproj` in Xcode.
 2. Select an iPad Simulator target, run with `Cmd+R`.
@@ -33,7 +33,7 @@ Pre-built artifacts live in `Build/` (`.app` bundle and `.ipa`). Verification is
 
 - MRC throughout: pair every `alloc`/`retain`/`copy` with `release`/`autorelease`; `dealloc` releases outlets, `viewDidUnload` nils them. No `weak`/`__strong`/`@autoreleasepool`.
 - `.h`/`.m` pairs per class; UI in matching XIB files wired through IBOutlet/IBAction.
-- Button image assets follow `Button <Mode> Norm.png` / `Button <Mode> Sele.png`.
+- Button image assets follow `Button <Mode> Norm.png` / `Button <Mode> Sele.png`. The Xcode project bundles the copies in `Project/iXpert for iPad/`; `Imgs/Buttons/` is source art outside the build.
 
 See `.github/copilot-instructions.md` for the full mode table and repository-structure breakdown, and `README.md` for the iPhone-vs-iPad feature comparison.
 

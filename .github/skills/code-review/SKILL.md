@@ -20,7 +20,7 @@ The canonical engineering standards live in the
 repo-tailored index into that guide plus the rules that only apply here. Precedence, highest
 first:
 
-1. This repository's `.github/copilot-instructions.md`, `CLAUDE.md`, and `CONTRIBUTING.md` —
+1. This repository's `.github/copilot-instructions.md`, `AGENTS.md`, and `CONTRIBUTING.md` —
    they describe *this* codebase and its load-bearing invariants.
 2. The **rios0rios0/guide** wiki — the shared standard.
 3. General language idiom.
@@ -65,7 +65,7 @@ them before the generic ones.
 - **Conversion correctness is the product.** Every mode needs its boundaries checked: empty input, odd-length hex, invalid Base64 padding, non-ASCII characters, and the one-way modes staying one-way. A silent wrong answer is the worst failure here.
 - **Popovers and action sheets are iPad-specific and stateful.** A popover presented while another is visible, or one that is not dismissed when its anchor disappears, raises at runtime. Check the presentation and dismissal paths together.
 - **Manual reference counting, everywhere.** Balance every `retain` with a `release`; no ARC, no Swift. **Critical** when unbalanced, and expect `-fno-objc-arc` on the `.m` files with a modern Xcode.
-- **Button images follow `Button <Mode> Norm.png` / `Button <Mode> Sele.png`.** A new mode needs both states, at the right size, under `Imgs/Buttons/` — a missing selected image shows an invisible button in the pressed state.
+- **Button images follow `Button <Mode> Norm.png` / `Button <Mode> Sele.png`.** A new mode needs both states, at the right size, in `Project/iXpert for iPad/` and in the target's Copy Bundle Resources (the Xcode project bundles those copies; `Imgs/Buttons/` is source art outside the build) — a missing selected image shows an invisible button in the pressed state.
 - **Only Apple system frameworks** (UIKit, Foundation, CommonCrypto). There is no CocoaPods, Carthage, or SwiftPM here and none should be added.
 - **UI layout is in XIB files** — an outlet renamed in the header without the XIB update crashes at load while compiling cleanly.
 - **Keep it in step with [`ixpert`](https://github.com/rios0rios0/ixpert)** where the conversion logic is shared in spirit: a fix to a converter here is usually a fix there too, and the review should say so.
@@ -100,8 +100,9 @@ hand.
 - Fragment bodies start with a lowercase verb in simple past tense, capitalise proper nouns
   (GitHub, Go, Docker), and wrap code identifiers and versions in backticks.
 - `README.md` is updated whenever usage, setup, configuration, or architecture changes;
-  `.github/copilot-instructions.md` and `CLAUDE.md` whenever the workflow, commands, or
-  structure changes. Documentation and code ship in one commit.
+  `.github/copilot-instructions.md` and `AGENTS.md` whenever the workflow, commands, or
+  structure changes. Documentation and code ship in one commit. `CLAUDE.md` stays the
+  single line `@AGENTS.md`.
 
 ## Git Flow and pull-request hygiene
 
@@ -166,7 +167,7 @@ A review that raises noise gets ignored. Do not report these:
 ### Change-control checklist
 - [ ] Changelog entry present for every behavioural change
 - [ ] `README.md` updated if usage, setup, or architecture changed
-- [ ] `.github/copilot-instructions.md` and `CLAUDE.md` updated if the workflow, commands, or structure changed
+- [ ] `.github/copilot-instructions.md` and `AGENTS.md` updated if the workflow, commands, or structure changed
 - [ ] Commit messages follow `type(SCOPE): message` in simple past tense
 - [ ] Breaking changes flagged in the commit footer, the changelog, and the PR description
 
