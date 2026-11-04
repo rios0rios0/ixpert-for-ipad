@@ -22,6 +22,12 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+## [0.5.2] - 2026-11-04
+
+### Changed
+
+- moved the agent instructions from `CLAUDE.md` to `AGENTS.md`, keeping a `CLAUDE.md` that imports it, and refreshed `AGENTS.md`, `.github/copilot-instructions.md` and the code-review skill to document the `checks.yaml` workflow and where the bundled button images live
+
 ## [0.5.1] - 2026-09-08
 
 ### Changed
